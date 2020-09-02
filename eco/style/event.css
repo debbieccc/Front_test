@@ -101,24 +101,24 @@ main {
 }
 
 
-.card1 .card__img,
+/*
 .card1 .card__img_hover  {
     background-image: url('../image/event/yoga.png');
 }
-.card2 .card__img,
+
 .card2 .card__img_hover {
     background-image: url('../image/event/volunteer.jpg');
 }
 
-.card3 .card__img,
+
 .card3 .card__img_hover {
     background-image: url('../image/event/bbq.jpg');
 }
 
-.card4 .card__img,
+
 .card4 .card__img_hover {
     background-image: url('../image/event/beef.jpg');
-}
+}*/
 
 
 

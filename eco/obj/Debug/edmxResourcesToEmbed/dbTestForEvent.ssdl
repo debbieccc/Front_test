@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbTestForEventRegister.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tEventRegister">
+    <Key>
+      <PropertyRef Name="fEventRegisterId" />
+    </Key>
+    <Property Name="fEventRegisterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fEventId" Type="int" />
+    <Property Name="fUserId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fnumAttendPeople" Type="int" />
+    <Property Name="ferName" Type="nvarchar" MaxLength="10" />
+    <Property Name="ferPhone" Type="nvarchar" MaxLength="10" />
+    <Property Name="ferEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="ferGender" Type="nvarchar" MaxLength="4" />
+    <Property Name="ferBirthday" Type="nvarchar" MaxLength="20" />
+    <Property Name="ferIdentity" Type="nvarchar" MaxLength="10" />
+    <Property Name="ferOccupation" Type="nvarchar" MaxLength="30" />
+    <Property Name="ferVeganOrNot" Type="int" />
+    <Property Name="ferOtherColumn1" Type="nvarchar(max)" />
+    <Property Name="ferOtherColumn2" Type="nvarchar(max)" />
+    <Property Name="ferOtherColumn3" Type="nvarchar(max)" />
+    <Property Name="ferOtherColumn4" Type="nvarchar(max)" />
+    <Property Name="ferOtherColumn5" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tEventSet">
+    <Key>
+      <PropertyRef Name="fEventId" />
+    </Key>
+    <Property Name="fEventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fUserId" Type="nvarchar" MaxLength="10" />
+    <Property Name="fEventTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="fCategory" Type="nvarchar" MaxLength="30" />
+    <Property Name="fEventFromDay" Type="nvarchar" MaxLength="50" />
+    <Property Name="fEventFromTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="fEventEndDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="fEventEndTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="fEventImgPath" Type="nvarchar" MaxLength="100" />
+    <Property Name="fEventLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="fEventDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="fEventFeeOrFree" Type="int" />
+    <Property Name="fEventFee" Type="int" />
+    <Property Name="fEventFromDay_R" Type="nvarchar" MaxLength="50" />
+    <Property Name="fEventFromTime_R" Type="nvarchar" MaxLength="50" />
+    <Property Name="fEventEndDate_R" Type="nvarchar" MaxLength="50" />
+    <Property Name="fEventEndTime_R" Type="nvarchar" MaxLength="50" />
+    <Property Name="fRemark" Type="nvarchar" MaxLength="200" />
+    <Property Name="ferUserId" Type="int" />
+    <Property Name="fnumAttendPeople" Type="int" />
+    <Property Name="ferName" Type="int" />
+    <Property Name="ferPhone" Type="int" />
+    <Property Name="ferEmail" Type="int" />
+    <Property Name="ferGender" Type="int" />
+    <Property Name="ferBirthday" Type="int" />
+    <Property Name="ferIdentity" Type="int" />
+    <Property Name="ferOccupation" Type="int" />
+    <Property Name="ferVeganOrNot" Type="int" />
+    <Property Name="ferOtherColumn1" Type="nvarchar(max)" />
+    <Property Name="ferOtherColumn2" Type="nvarchar(max)" />
+    <Property Name="ferOtherColumn3" Type="nvarchar(max)" />
+    <Property Name="ferOtherColumn4" Type="nvarchar(max)" />
+    <Property Name="ferOtherColumn5" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="dbTestForEventRegisterStoreContainer">
+    <EntitySet Name="tEventRegister" EntityType="Self.tEventRegister" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tEventSet" EntityType="Self.tEventSet" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

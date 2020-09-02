@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbTestForEventRegisterStoreContainer" CdmEntityContainer="TestForEventRegisterEntities">
+    <EntitySetMapping Name="tEventRegister">
+      <EntityTypeMapping TypeName="dbTestForEventRegister.tEventRegister">
+        <MappingFragment StoreEntitySet="tEventRegister">
+          <ScalarProperty Name="fEventRegisterId" ColumnName="fEventRegisterId" />
+          <ScalarProperty Name="fEventId" ColumnName="fEventId" />
+          <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+          <ScalarProperty Name="fnumAttendPeople" ColumnName="fnumAttendPeople" />
+          <ScalarProperty Name="ferName" ColumnName="ferName" />
+          <ScalarProperty Name="ferPhone" ColumnName="ferPhone" />
+          <ScalarProperty Name="ferEmail" ColumnName="ferEmail" />
+          <ScalarProperty Name="ferGender" ColumnName="ferGender" />
+          <ScalarProperty Name="ferBirthday" ColumnName="ferBirthday" />
+          <ScalarProperty Name="ferIdentity" ColumnName="ferIdentity" />
+          <ScalarProperty Name="ferOccupation" ColumnName="ferOccupation" />
+          <ScalarProperty Name="ferVeganOrNot" ColumnName="ferVeganOrNot" />
+          <ScalarProperty Name="ferOtherColumn1" ColumnName="ferOtherColumn1" />
+          <ScalarProperty Name="ferOtherColumn2" ColumnName="ferOtherColumn2" />
+          <ScalarProperty Name="ferOtherColumn3" ColumnName="ferOtherColumn3" />
+          <ScalarProperty Name="ferOtherColumn4" ColumnName="ferOtherColumn4" />
+          <ScalarProperty Name="ferOtherColumn5" ColumnName="ferOtherColumn5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tEventSet">
+      <EntityTypeMapping TypeName="dbTestForEventRegister.tEventSet">
+        <MappingFragment StoreEntitySet="tEventSet">
+          <ScalarProperty Name="fEventId" ColumnName="fEventId" />
+          <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+          <ScalarProperty Name="fEventTitle" ColumnName="fEventTitle" />
+          <ScalarProperty Name="fCategory" ColumnName="fCategory" />
+          <ScalarProperty Name="fEventFromDay" ColumnName="fEventFromDay" />
+          <ScalarProperty Name="fEventFromTime" ColumnName="fEventFromTime" />
+          <ScalarProperty Name="fEventEndDate" ColumnName="fEventEndDate" />
+          <ScalarProperty Name="fEventEndTime" ColumnName="fEventEndTime" />
+          <ScalarProperty Name="fEventImgPath" ColumnName="fEventImgPath" />
+          <ScalarProperty Name="fEventLocation" ColumnName="fEventLocation" />
+          <ScalarProperty Name="fEventDescription" ColumnName="fEventDescription" />
+          <ScalarProperty Name="fEventFeeOrFree" ColumnName="fEventFeeOrFree" />
+          <ScalarProperty Name="fEventFee" ColumnName="fEventFee" />
+          <ScalarProperty Name="fEventFromDay_R" ColumnName="fEventFromDay_R" />
+          <ScalarProperty Name="fEventFromTime_R" ColumnName="fEventFromTime_R" />
+          <ScalarProperty Name="fEventEndDate_R" ColumnName="fEventEndDate_R" />
+          <ScalarProperty Name="fEventEndTime_R" ColumnName="fEventEndTime_R" />
+          <ScalarProperty Name="fRemark" ColumnName="fRemark" />
+          <ScalarProperty Name="ferUserId" ColumnName="ferUserId" />
+          <ScalarProperty Name="fnumAttendPeople" ColumnName="fnumAttendPeople" />
+          <ScalarProperty Name="ferName" ColumnName="ferName" />
+          <ScalarProperty Name="ferPhone" ColumnName="ferPhone" />
+          <ScalarProperty Name="ferEmail" ColumnName="ferEmail" />
+          <ScalarProperty Name="ferGender" ColumnName="ferGender" />
+          <ScalarProperty Name="ferBirthday" ColumnName="ferBirthday" />
+          <ScalarProperty Name="ferIdentity" ColumnName="ferIdentity" />
+          <ScalarProperty Name="ferOccupation" ColumnName="ferOccupation" />
+          <ScalarProperty Name="ferVeganOrNot" ColumnName="ferVeganOrNot" />
+          <ScalarProperty Name="ferOtherColumn1" ColumnName="ferOtherColumn1" />
+          <ScalarProperty Name="ferOtherColumn2" ColumnName="ferOtherColumn2" />
+          <ScalarProperty Name="ferOtherColumn3" ColumnName="ferOtherColumn3" />
+          <ScalarProperty Name="ferOtherColumn4" ColumnName="ferOtherColumn4" />
+          <ScalarProperty Name="ferOtherColumn5" ColumnName="ferOtherColumn5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -14,6 +14,14 @@ namespace eco.Controllers
             return View();
         }
 
+        public ActionResult Event2()
+        {
+            TestForEventRegisterEntities db = new TestForEventRegisterEntities();
+            var events = from t in (new TestForEventRegisterEntities()).tEventSet
+                        select t;
+            return View(events);
+        }
+
         public ActionResult Event_yoga()
         {
             return View();
