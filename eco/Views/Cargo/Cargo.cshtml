@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Cargo";
+}
+    <main class="container mt-4">
+
+        <link rel="stylesheet" href="../style/package.css">
+
+        <div class="smalltitle">
+            <h2><b>｜　郵務管理　｜</b></h2>
+        </div>
+
+        <div class="packagebtns d-flex">
+            <button type="button" id="unreceive" class="btn btn-outline-info col-4">未領取</button>
+            <button type="button" id="received" class="btn btn-outline-info col-4">已領取</button>
+            <button type="button" id="return" class="btn btn-outline-info col-4">退貨紀錄</button>
+
+        </div>
+
+        <div class="packageboxsss mt-4">
+            <div class="row packagebox mb-3">
+                <img class="pkgpic" id="idpkg" src="../image/package/package.png" alt="">
+                <div class="packagemsg ml-4">
+                    <h3>大榮貨運</h3>
+                    <div>寄件者： 吳怡農</div>
+                    <div>收件者： 一同</div>
+                    <div>內容物： 包裹</div>
+                    <div>送達時間：2020-07-19</div>
+                </div>
+            </div>
+
+
+            <div class="row packagebox mb-3">
+                <img class="pkgpic" id="idmail" src="../image/package/mail.png" alt="">
+                <div class="packagemsg ml-4">
+                    <h3>中華郵政</h3>
+                    <div>寄件者： 台灣彩券</div>
+                    <div>收件者： 一同</div>
+                    <div>內容物： 中獎通知 (掛號號碼：571149 091813 61)</div>
+                    <div>送達時間：2020-07-28</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+<script>
+    $("#unreceive").click(function () {
+        $("#idpkg").attr("src", "../image/package/package.png")
+        $(this).css("color", "#fff").css("backgroundColor", "#17a2b8")
+            .siblings().css("color", "#17a2b8").css("backgroundColor", "#fff")
+        $("#idmail").attr("src", "../image/package/mail.png")
+        $(".packagemsg").css("color", "black")
+    })
+
+    $("#received").click(function () {
+        $("#idpkg").attr("src", "../image/package/package_received.png")
+        $(this).css("color", "#fff").css("backgroundColor", "#17a2b8")
+            .siblings().css("color", "#17a2b8").css("backgroundColor", "#fff")
+        $("#idmail").attr("src", "../image/package/mail_received.png")
+        $(".packagemsg").css("color", "#c8c8c8")
+    })
+
+    $("#return").click(function () {
+        $(this).css("color", "#fff").css("backgroundColor", "#17a2b8")
+            .siblings().css("color", "#17a2b8").css("backgroundColor", "#fff")
+        $("#idpkg").attr("src", "../image/package/package.png")
+        $("#idmail").attr("src", "../image/package/mail.png")
+        $(".packagemsg").css("color", "black")
+    })
+</script>
