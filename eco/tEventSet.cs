@@ -25,7 +25,7 @@ namespace eco
         public string fEventImgPath { get; set; }
         public string fEventLocation { get; set; }
         public string fEventDescription { get; set; }
-        public Nullable<int> fEventFeeOrFree { get; set; }
+        public string fEventFeeOrFree { get; set; }
         public Nullable<int> fEventFee { get; set; }
         public string fEventFromDay_R { get; set; }
         public string fEventFromTime_R { get; set; }

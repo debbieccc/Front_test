@@ -1,9 +1,11 @@
-﻿
+﻿@model IEnumerable<eco.tEventSet>
+
 @{
     ViewBag.Title = "Event";
 }
-   @*<link rel="stylesheet" href="../style/event.css">*@
-
+<link rel="stylesheet" href="../style/event.css">
+<link rel="stylesheet" href="~/fontawesome/all.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <main class="container mt-4">
     <div class="smalltitle" style="text-align: center;">
         <h2><b>｜　社區活動　｜</b></h2>
@@ -54,33 +56,22 @@
         </div>
 
     </div>
-    <div class="card-deck">
-        <div class="card">
-            <img src="~/image/event/volunteer.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title"> Event title </h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <div class="row ">
+        @foreach (var item in Model)
+        {
+            <div class="eventcard">
+                <img src="~/image/event/yoga.png" class="card-img-top" alt="...">
+                <div class="card_body">
+                    <span class="eventtime"> <i class="fa fa-clock-o"></i> @Html.DisplayFor(modelItem => item.fEventFromDay) - @Html.DisplayFor(modelItem => item.fEventEndDate)</span>
+                    <h5 class="eventtitle"><b> @Html.DisplayFor(modelItem => item.fEventTitle)</b> </h5>
+                   
+                   <div class="categoryhashtag d-flex justify-content-between">
+                       <span class="">　# @Html.DisplayFor(modelItem => item.fCategory)</span>
+                       <span class="followup"><i class="fa fa-plus"></i>關注</span>
+                   </div>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="~/image/event/yoga.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="~/image/event/bbq.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-        
-
+        }
     </div>
 
 </main>

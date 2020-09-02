@@ -4852,19 +4852,20 @@ input[type="button"].btn-block {
   .card-deck {
     display: -ms-flexbox;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
     /*-ms-flex-flow:  wrap;*/
     /*flex-flow: row wrap;*/
     margin-right: -15px;
     margin-left: -15px;
   }
-  .card-deck .card {
-    /*-ms-flex: 1 0 0%;*/
-  /*  flex: 1 0 0%;*/
-    margin-right: 15px;
-    margin-bottom: 0;
-    margin-left: 15px;
-  }
+    .card-deck .card {
+        /*-ms-flex: 1 0 0%;*/
+        /*  flex: 1 0 0%;*/
+        margin-right: 15px;
+        margin-bottom: 0;
+        margin-left: 15px;
+        flex-wrap: wrap;
+    }
 }
 
 .card-group > .card {
@@ -4873,7 +4874,7 @@ input[type="button"].btn-block {
 
 @media (min-width: 576px) {
   .card-group {
-    display: -ms-flexbox;
+    /*display: -ms-flexbox;*/
     display: flex;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;

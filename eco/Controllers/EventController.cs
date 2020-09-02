@@ -11,13 +11,18 @@ namespace eco.Controllers
         
         public ActionResult Event()
         {
-            return View();
+            IQueryable<tEventSet> events = null;
+            TestForEventRegisterEntities db = new TestForEventRegisterEntities();
+            events = from t in (new TestForEventRegisterEntities()).tEventSet
+                     select t;
+            return View(events);
         }
 
         public ActionResult Event2()
         {
+            IQueryable<tEventSet> events = null;
             TestForEventRegisterEntities db = new TestForEventRegisterEntities();
-            var events = from t in (new TestForEventRegisterEntities()).tEventSet
+            events = from t in (new TestForEventRegisterEntities()).tEventSet
                         select t;
             return View(events);
         }

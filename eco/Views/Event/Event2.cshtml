@@ -1,185 +1,225 @@
-﻿
+﻿@model IEnumerable<eco.tEventSet>
+
 @{
     ViewBag.Title = "Event2";
 }
-<link rel="stylesheet" href="../style/event.css">
 
-<main class="container mt-4">
-    <div class="smalltitle" style="text-align: center;">
-        <h2><b>｜　社區活動　｜</b></h2>
-    </div>
-    <div class="searchbar">
-        <form class="form-inline my-2 my-lg-0 ">
-            <div class="">
-                <label>
-                    <select class="form-control_select mr-sm-2">
-                        <option value="allCategory">分類</option>
-                        <option value="sport">運動</option>
-                        <option value="lesson">課程 </option>
-                        <option value="buytogether">團購</option>
-                        <option value="gathering">聚會</option>
-                        <option value="buytogether">招募</option>
-                        <option value="other">其他</option>
-                    </select>
-                </label>
-            </div>
-            <input class="form-control_1 mr-sm-2" type="search" placeholder="請輸入關鍵字" aria-label="Search">
-            <span> 日期：</span>
-            <input class="form-control_date mr-sm-2" id="datepicker" type="date" placeholder="請選擇日期"
-                   aria-label="Search"> <span> 到 &nbsp;</span>
-            <input class="form-control_date mr-sm-2" id="datepicker" type="date" placeholder="請選擇日期"
-                   aria-label="Search">
-            <button type="button" class="btn btn-info"> <i class="fa fa-search"></i> 搜尋</button>
-        </form>
-    </div>
-    <div class="row mb-5 ml-2">
-        <div class="orderby mt-4">
-            排序方式：
-            <label>
-                <select class="form-control_select mr-sm-2" style="width: 120px">
-                    <option value="sport">由近到遠</option>
-                    <option value="lesson">由遠到近</option>
-                </select>
-            </label>
-        </div>
+<h2>Event2</h2>
 
-        <div class="orderby mt-4">
-            <label>
-                <select class="form-control_select mr-sm-2">
-                    <option value="allCategory">費用</option>
-                    <option value="buytogether">免費</option>
-                    <option value="gathering">付費</option>
-                </select>
-            </label>
-        </div>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventFromDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventFromTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventEndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventEndTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventImgPath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventFeeOrFree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventFromDay_R)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventFromTime_R)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventEndDate_R)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fEventEndTime_R)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fRemark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ferUserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fnumAttendPeople)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ferName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ferPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ferEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ferGender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ferBirthday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ferIdentity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ferOccupation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ferVeganOrNot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ferOtherColumn1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ferOtherColumn2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ferOtherColumn3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ferOtherColumn4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ferOtherColumn5)
+        </th>
+        <th></th>
+    </tr>
 
-    </div>
-    <section class="cards container">
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fUserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventFromDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventFromTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventEndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventEndTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventImgPath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventFeeOrFree)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventFromDay_R)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventFromTime_R)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventEndDate_R)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fEventEndTime_R)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fRemark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ferUserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fnumAttendPeople)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ferName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ferPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ferEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ferGender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ferBirthday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ferIdentity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ferOccupation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ferVeganOrNot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ferOtherColumn1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ferOtherColumn2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ferOtherColumn3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ferOtherColumn4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ferOtherColumn5)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
 
-        <article class="card card2  col-4">
-            <div class="card__img"></div>
-            <a href="#" class="card_link">
-                <div class="card__img_hover"></div>
-            </a>
-            <div class="card__info">
-                <span class="card__category"><i class="fa fa-clock-o"></i> 2020-07-23 - 2020-09-23</span>
-                <a class="link" href="#">
-                    <h5 class="card__title">社區志工 熱烈招募中!</h5>
-                </a>
-                <span class="card__by">by <a href="#" class="card__author" title="author">管理委員會</a></span>
-            </div>
-            <div class="categoryhashtag d-flex justify-content-between">
-                <span class="categoryhashtag">　<i class="fa fa-hashtag"></i>招募</span>
-                <span class="followup_yes">已關注</span>
-            </div>
-        </article>
-
-        <article class="card card1 col-4 ">
-            <div class="card__img"></div>
-            <a href="Event_yoga" class="card_link">
-                <div class="card__img_hover"></div>
-            </a>
-            <div class="card__info">
-                <span class="card__category"> <i class="fa fa-clock-o"></i> 2020-07-23 - 2020-09-23</span>
-                <a class="link" href="#">
-                    <h5 class="card__title">肩頸深度延展 瑜珈初學課程</h5>
-                </a>
-                <span class="card__by">
-                    by <a href="#" class="card__author" title="author">
-                        B棟302
-                        Olivia
-                    </a>
-                </span>
-            </div>
-            <div class="categoryhashtag d-flex justify-content-between">
-                <span class="categoryhashtag">　<i class="fa fa-hashtag"></i>課程</span>
-                <span class="followup"><i class="fa fa-plus"></i>關注</span>
-            </div>
-        </article>
-
-
-
-        <article class="card card3  col-4 ">
-            <div class="card__img"></div>
-            <a href="#" class="card_link">
-                <div class="card__img_hover"></div>
-            </a>
-            <div class="card__info">
-                <span class="card__category"><i class="fa fa-clock-o"></i> 2020-10-1</span>
-                <a class="link" href="#">
-                    <h5 class="card__title">月圓人圓圓 中秋烤肉趴</h5>
-                </a>
-                <span class="card__by">by <a href="#" class="card__author" title="author">管理委員會</a></span>
-            </div>
-            <div class="categoryhashtag d-flex justify-content-between">
-                <span class="categoryhashtag">　<i class="fa fa-hashtag"></i>聚會</span>
-                <span class="followup"><i class="fa fa-plus"></i>關注</span>
-            </div>
-        </article>
-
-    </section>
-    <section class="cards container d-flex mt-4">
-        <article class="card card1 col-4 ">
-            <div class="card__img"></div>
-            <a href="event_yoga.html" class="card_link">
-                <div class="card__img_hover"></div>
-            </a>
-            <div class="card__info">
-                <span class="card__category"> <i class="fa fa-clock-o"></i> 2020-07-23 - 2020-09-23</span>
-                <a class="link" href="#">
-                    <h5 class="card__title">肩頸深度延展 瑜珈初學課程</h5>
-                </a>
-                <span class="card__by">
-                    by <a href="#" class="card__author" title="author">
-                        B棟302
-                        Olivia
-                    </a>
-                </span>
-            </div>
-            <div class="categoryhashtag d-flex justify-content-between">
-                <span class="categoryhashtag">　<i class="fa fa-hashtag"></i>課程</span>
-                <span class="followup"><i class="fa fa-plus"></i>關注</span>
-            </div>
-        </article>
-
-        <article class="card card2  col-4 ">
-            <div class="card__info-hover"> </div>
-            <div class="card__img"></div>
-            <a href="#" class="card_link">
-                <div class="card__img_hover"></div>
-            </a>
-            <div class="card__info">
-                <span class="card__category"><i class="fa fa-clock-o"></i> 2020-07-23 - 2020-09-23</span>
-
-                <a class="link" href="#">
-                    <h5 class="card__title">社區志工 熱烈招募中!</h5>
-                </a>
-                <span class="card__by">by <a href="#" class="card__author" title="author">管理委員會</a></span>
-            </div>
-            <div class="categoryhashtag d-flex justify-content-between">
-                <span class="categoryhashtag">　<i class="fa fa-hashtag"></i>招募</span>
-                <span class="followup"><i class="fa fa-plus"></i>關注</span>
-            </div>
-        </article>
-
-        <article class="card card3  col-4">
-            <div class="card__info-hover"> </div>
-            <div class="card__img"></div>
-            <a href="#" class="card_link">
-                <div class="card__img_hover"></div>
-            </a>
-            <div class="card__info">
-                <span class="card__category"><i class="fa fa-clock-o"></i> 2020-10-1</span>
-                <a class="link" href="#">
-                    <h5 class="card__title">月圓人圓圓 中秋烤肉趴</h5>
-                </a>
-                <span class="card__by">by <a href="#" class="card__author" title="author">管理委員會</a></span>
-            </div>
-            <div class="categoryhashtag d-flex justify-content-between">
-                <span class="categoryhashtag">　<i class="fa fa-hashtag"></i>聚會</span>
-                <span class="followup"><i class="fa fa-plus"></i>關注</span>
-            </div>
-        </article>
-    </section>
-</main>
-
+</table>

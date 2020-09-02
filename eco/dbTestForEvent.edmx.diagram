@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="0b7c7c674d1e442e9d9e66079e23b950" Name="Diagram1">
         <EntityTypeShape EntityType="dbTestForEventRegister.tEventRegister" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbTestForEventRegister.tEventSet" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbTestForEventRegister.tEventSet" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

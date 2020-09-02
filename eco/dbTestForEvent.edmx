@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="dbTestForEventRegister.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="dbTestForEventRegister.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tEventRegister">
           <Key>
             <PropertyRef Name="fEventRegisterId" />
@@ -42,7 +42,7 @@
           <Property Name="fEventImgPath" Type="nvarchar" MaxLength="100" />
           <Property Name="fEventLocation" Type="nvarchar" MaxLength="50" />
           <Property Name="fEventDescription" Type="nvarchar" MaxLength="500" />
-          <Property Name="fEventFeeOrFree" Type="int" />
+          <Property Name="fEventFeeOrFree" Type="nvarchar" MaxLength="10" />
           <Property Name="fEventFee" Type="int" />
           <Property Name="fEventFromDay_R" Type="nvarchar" MaxLength="50" />
           <Property Name="fEventFromTime_R" Type="nvarchar" MaxLength="50" />
@@ -69,8 +69,7 @@
           <EntitySet Name="tEventRegister" EntityType="Self.tEventRegister" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tEventSet" EntityType="Self.tEventSet" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dbTestForEventRegister" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -96,6 +95,10 @@
           <Property Name="ferOtherColumn4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ferOtherColumn5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityContainer Name="TestForEventRegisterEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tEventRegister" EntityType="Self.tEventRegister" />
+          <EntitySet Name="tEventSet" EntityType="dbTestForEventRegister.tEventSet" />
+        </EntityContainer>
         <EntityType Name="tEventSet">
           <Key>
             <PropertyRef Name="fEventId" />
@@ -111,7 +114,7 @@
           <Property Name="fEventImgPath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="fEventLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="fEventDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="fEventFeeOrFree" Type="Int32" />
+          <Property Name="fEventFeeOrFree" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="fEventFee" Type="Int32" />
           <Property Name="fEventFromDay_R" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="fEventFromTime_R" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -134,10 +137,6 @@
           <Property Name="ferOtherColumn4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ferOtherColumn5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="TestForEventRegisterEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="tEventRegister" EntityType="Self.tEventRegister" />
-          <EntitySet Name="tEventSet" EntityType="Self.tEventSet" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -170,39 +169,39 @@
           <EntitySetMapping Name="tEventSet">
             <EntityTypeMapping TypeName="dbTestForEventRegister.tEventSet">
               <MappingFragment StoreEntitySet="tEventSet">
-                <ScalarProperty Name="fEventId" ColumnName="fEventId" />
-                <ScalarProperty Name="fUserId" ColumnName="fUserId" />
-                <ScalarProperty Name="fEventTitle" ColumnName="fEventTitle" />
-                <ScalarProperty Name="fCategory" ColumnName="fCategory" />
-                <ScalarProperty Name="fEventFromDay" ColumnName="fEventFromDay" />
-                <ScalarProperty Name="fEventFromTime" ColumnName="fEventFromTime" />
-                <ScalarProperty Name="fEventEndDate" ColumnName="fEventEndDate" />
-                <ScalarProperty Name="fEventEndTime" ColumnName="fEventEndTime" />
-                <ScalarProperty Name="fEventImgPath" ColumnName="fEventImgPath" />
-                <ScalarProperty Name="fEventLocation" ColumnName="fEventLocation" />
-                <ScalarProperty Name="fEventDescription" ColumnName="fEventDescription" />
-                <ScalarProperty Name="fEventFeeOrFree" ColumnName="fEventFeeOrFree" />
-                <ScalarProperty Name="fEventFee" ColumnName="fEventFee" />
-                <ScalarProperty Name="fEventFromDay_R" ColumnName="fEventFromDay_R" />
-                <ScalarProperty Name="fEventFromTime_R" ColumnName="fEventFromTime_R" />
-                <ScalarProperty Name="fEventEndDate_R" ColumnName="fEventEndDate_R" />
-                <ScalarProperty Name="fEventEndTime_R" ColumnName="fEventEndTime_R" />
-                <ScalarProperty Name="fRemark" ColumnName="fRemark" />
-                <ScalarProperty Name="ferUserId" ColumnName="ferUserId" />
-                <ScalarProperty Name="fnumAttendPeople" ColumnName="fnumAttendPeople" />
-                <ScalarProperty Name="ferName" ColumnName="ferName" />
-                <ScalarProperty Name="ferPhone" ColumnName="ferPhone" />
-                <ScalarProperty Name="ferEmail" ColumnName="ferEmail" />
-                <ScalarProperty Name="ferGender" ColumnName="ferGender" />
-                <ScalarProperty Name="ferBirthday" ColumnName="ferBirthday" />
-                <ScalarProperty Name="ferIdentity" ColumnName="ferIdentity" />
-                <ScalarProperty Name="ferOccupation" ColumnName="ferOccupation" />
-                <ScalarProperty Name="ferVeganOrNot" ColumnName="ferVeganOrNot" />
-                <ScalarProperty Name="ferOtherColumn1" ColumnName="ferOtherColumn1" />
-                <ScalarProperty Name="ferOtherColumn2" ColumnName="ferOtherColumn2" />
-                <ScalarProperty Name="ferOtherColumn3" ColumnName="ferOtherColumn3" />
-                <ScalarProperty Name="ferOtherColumn4" ColumnName="ferOtherColumn4" />
                 <ScalarProperty Name="ferOtherColumn5" ColumnName="ferOtherColumn5" />
+                <ScalarProperty Name="ferOtherColumn4" ColumnName="ferOtherColumn4" />
+                <ScalarProperty Name="ferOtherColumn3" ColumnName="ferOtherColumn3" />
+                <ScalarProperty Name="ferOtherColumn2" ColumnName="ferOtherColumn2" />
+                <ScalarProperty Name="ferOtherColumn1" ColumnName="ferOtherColumn1" />
+                <ScalarProperty Name="ferVeganOrNot" ColumnName="ferVeganOrNot" />
+                <ScalarProperty Name="ferOccupation" ColumnName="ferOccupation" />
+                <ScalarProperty Name="ferIdentity" ColumnName="ferIdentity" />
+                <ScalarProperty Name="ferBirthday" ColumnName="ferBirthday" />
+                <ScalarProperty Name="ferGender" ColumnName="ferGender" />
+                <ScalarProperty Name="ferEmail" ColumnName="ferEmail" />
+                <ScalarProperty Name="ferPhone" ColumnName="ferPhone" />
+                <ScalarProperty Name="ferName" ColumnName="ferName" />
+                <ScalarProperty Name="fnumAttendPeople" ColumnName="fnumAttendPeople" />
+                <ScalarProperty Name="ferUserId" ColumnName="ferUserId" />
+                <ScalarProperty Name="fRemark" ColumnName="fRemark" />
+                <ScalarProperty Name="fEventEndTime_R" ColumnName="fEventEndTime_R" />
+                <ScalarProperty Name="fEventEndDate_R" ColumnName="fEventEndDate_R" />
+                <ScalarProperty Name="fEventFromTime_R" ColumnName="fEventFromTime_R" />
+                <ScalarProperty Name="fEventFromDay_R" ColumnName="fEventFromDay_R" />
+                <ScalarProperty Name="fEventFee" ColumnName="fEventFee" />
+                <ScalarProperty Name="fEventFeeOrFree" ColumnName="fEventFeeOrFree" />
+                <ScalarProperty Name="fEventDescription" ColumnName="fEventDescription" />
+                <ScalarProperty Name="fEventLocation" ColumnName="fEventLocation" />
+                <ScalarProperty Name="fEventImgPath" ColumnName="fEventImgPath" />
+                <ScalarProperty Name="fEventEndTime" ColumnName="fEventEndTime" />
+                <ScalarProperty Name="fEventEndDate" ColumnName="fEventEndDate" />
+                <ScalarProperty Name="fEventFromTime" ColumnName="fEventFromTime" />
+                <ScalarProperty Name="fEventFromDay" ColumnName="fEventFromDay" />
+                <ScalarProperty Name="fCategory" ColumnName="fCategory" />
+                <ScalarProperty Name="fEventTitle" ColumnName="fEventTitle" />
+                <ScalarProperty Name="fUserId" ColumnName="fUserId" />
+                <ScalarProperty Name="fEventId" ColumnName="fEventId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

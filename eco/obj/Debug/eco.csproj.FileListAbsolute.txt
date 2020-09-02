@@ -321,7 +321,6 @@ C:\Users\User\Source\Repos\debbieccc\Front_test\eco\bin\zh-Hant\System.Web.Razor
 C:\Users\User\Source\Repos\debbieccc\Front_test\eco\bin\zh-Hant\System.Web.WebPages.resources.dll
 C:\Users\User\Source\Repos\debbieccc\Front_test\eco\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
 C:\Users\User\Source\Repos\debbieccc\Front_test\eco\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
-C:\Users\User\Source\Repos\debbieccc\Front_test\eco\obj\Debug\eco.csprojAssemblyReference.cache
 C:\Users\User\Source\Repos\debbieccc\Front_test\eco\obj\Debug\eco.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\debbieccc\Front_test\eco\obj\Debug\eco.csproj.CopyComplete
 C:\Users\User\Source\Repos\debbieccc\Front_test\eco\obj\Debug\eco.dll
@@ -331,3 +330,4 @@ C:\Users\User\Source\Repos\debbieccc\Front_test\eco\bin\EntityFramework.SqlServe
 C:\Users\User\Source\Repos\debbieccc\Front_test\eco\bin\EntityFramework.xml
 C:\Users\User\Source\Repos\debbieccc\Front_test\eco\bin\EntityFramework.SqlServer.xml
 C:\Users\User\Source\Repos\debbieccc\Front_test\eco\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\User\Source\Repos\debbieccc\Front_test\eco\obj\Debug\eco.csprojAssemblyReference.cache
