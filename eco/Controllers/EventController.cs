@@ -64,11 +64,7 @@ namespace eco.Controllers
             if (set.ferVeganOrNot == 1)
             {
                 ViewBag.ferVeganOrNot = 1;
-            }
-            if (set.ferGender == 1)
-            {
-                ViewBag.ferGender = 1;
-            }
+            }            
             if (set.ferOtherColumn1 !=null)
             {
                 ViewBag.ferOtherColumn1 = set.ferOtherColumn1;
@@ -89,7 +85,6 @@ namespace eco.Controllers
             {
                 ViewBag.ferOtherColumn5 = set.ferOtherColumn5;
             }
-
 
             return View(x);
         }     

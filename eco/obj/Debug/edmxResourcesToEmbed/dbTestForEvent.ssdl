@@ -11,7 +11,7 @@
     <Property Name="ferName" Type="nvarchar" MaxLength="10" />
     <Property Name="ferPhone" Type="nvarchar" MaxLength="10" />
     <Property Name="ferEmail" Type="nvarchar" MaxLength="50" />
-    <Property Name="ferGender" Type="nvarchar" MaxLength="4" />
+    <Property Name="ferGender" Type="nvarchar" MaxLength="10" />
     <Property Name="ferBirthday" Type="nvarchar" MaxLength="20" />
     <Property Name="ferIdentity" Type="nvarchar" MaxLength="10" />
     <Property Name="ferOccupation" Type="nvarchar" MaxLength="30" />

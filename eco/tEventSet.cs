@@ -11,7 +11,8 @@ namespace eco
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Web;
+
     public partial class tEventSet
     {
         public int fEventId { get; set; }
@@ -23,6 +24,7 @@ namespace eco
         public string fEventEndDate { get; set; }
         public string fEventEndTime { get; set; }
         public string fEventImgPath { get; set; }
+        public HttpPostedFileBase fImage { get; set; }
         public string fEventLocation { get; set; }
         public string fEventDescription { get; set; }
         public string fEventFeeOrFree { get; set; }
