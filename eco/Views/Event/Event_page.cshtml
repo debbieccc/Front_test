@@ -1,0 +1,51 @@
+﻿@model eco.tEventSet
+
+@{
+    ViewBag.Title = "Event_page";
+}
+@functions{ 
+    public string freeorfee(int? dollor)
+    {
+        if (dollor == 0 || dollor == null)
+        {
+            return "免費";
+        }
+        else
+        {
+            return dollor.ToString();
+        }
+    }
+}
+<link rel="stylesheet" href="~/fontawesome/all.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<main class="container mt-4">
+      <img src="~/image/event/yoga_signup.png" alt="">
+      <div class="bkg">
+          <h3 class="font-weight-bold">  @Html.DisplayFor(model => model.fEventTitle) </h3>
+          <h5 class="font-weight-bold"> <i class="fa fa-clock-o"></i> 活動時間</h5>
+          <div class="ml-4"> @Html.DisplayFor(model => model.fEventFromDay) @Html.DisplayFor(model => model.fEventFromTime) -  @Html.DisplayFor(model => model.fEventEndDate) @Html.DisplayFor(model => model.fEventEndTime)</div>
+          <h5 class="font-weight-bold"><i class="fa fa-map-marker"></i> 活動地點 </h5>
+          <div class="ml-4  mb-3"> @Html.DisplayFor(model => model.fEventLocation) </div>
+          <h5 class="font-weight-bold"><i class="fa fa-paperclip"></i> 活動內容 </h5>
+          <div class="ml-4  mb-3">
+              @Html.DisplayFor(model => model.fEventDescription)
+          </div>
+          <h5 class="font-weight-bold"><i class="fa fa-dollar-sign"></i> 報名費用 </h5>
+          <div class="ml-4  mb-3">  @Html.DisplayFor(model => model.fEventFee) 元 </div>
+          <h5 class="font-weight-bold"><i class="fa fa-exclamation"></i> 注意事項</h5>
+          <div class="ml-4  mb-3">@Html.DisplayFor(model => model.fRemark)</div>
+          <div class="text-center ">
+              @Html.ActionLink("我要報名", "Event_signup", new { id = @Html.DisplayFor(model => model.fEventId) }, new { @class = "btn btn-info mt-2" })
+          </div>
+      <div>
+          @Html.ActionLink("回列表", "Event", new {  }, new { @class = " btn btn-outline-dark" })
+      </div>
+      </div>
+</main>
+
+
+
+<p>
+  
+</p>

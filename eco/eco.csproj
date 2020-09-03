@@ -220,6 +220,7 @@
     <Content Include="JS\bootstrap-datetimepicker.zh-TW.js" />
     <Content Include="JS\cover.js" />
     <Content Include="JS\echarts.min.js" />
+    <Content Include="JS\eventsignup.js" />
     <Content Include="JS\financialBarLine.js" />
     <Content Include="JS\financialLine.js" />
     <Content Include="JS\Forum.js" />
@@ -432,10 +433,10 @@
     <Content Include="Views\financial\gasData.cshtml" />
     <Content Include="Views\financial\communityMoney.cshtml" />
     <Content Include="Views\Event\Event.cshtml" />
-    <Content Include="Views\Event\Event_yoga.cshtml" />
-    <Content Include="Views\Event\Event_signup.cshtml" />
+    <Content Include="Views\Event\Event_signup_html.cshtml" />
     <Content Include="Views\Cargo\Cargo.cshtml" />
-    <Content Include="Views\Event\Event2.cshtml" />
+    <Content Include="Views\Event\Event_page.cshtml" />
+    <Content Include="Views\Event\Event_signup.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

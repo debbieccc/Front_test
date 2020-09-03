@@ -68,12 +68,21 @@ d-flex {
     padding: 1.25rem 1.25rem 0px 1.25rem;
 }
 
+
 .eventtitle {
     margin-left: 9px;
     font-size: 20px;
 }
 
-.link{    
+.eventtitle a {
+    color:black;
+}
+
+.eventtitle a:hover{
+    text-decoration:none
+}
+
+.link {
     color: black
 }
 
@@ -124,10 +133,11 @@ d-flex {
     box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
 
-.eventcard:hover {
-    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-    transform: scale(1.02, 1.02);
-}
+    .eventcard:hover {
+        box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+        transform: scale(1.02, 1.02);
+        /*transition: 0.35s;*/
+    }
 
 .card_info {
     z-index: 2;
@@ -191,16 +201,20 @@ d-flex {
     color: rgb(206, 136, 7);
 }
 
-.followup_yes{
-    border: 1px orange solid;
-    background-color: orange;
-    padding: 5px;
-    font-weight: 400;
-    font-size: 16px;
-    border-radius: 5px;
-    margin-bottom: 6px;
-    color:white;
-}
+    .followup:hover{
+        cursor:pointer;
+    }
+
+    .followup_yes {
+        border: 1px orange solid;
+        background-color: orange;
+        padding: 5px;
+        font-weight: 400;
+        font-size: 16px;
+        border-radius: 5px;
+        margin-bottom: 6px;
+        color: white;
+    }
 
 .categoryhashtag {
     border-top: 1px solid gainsboro;

@@ -22,6 +22,10 @@
     <Property Name="ferOtherColumn4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="ferOtherColumn5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityContainer Name="TestForEventRegisterEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tEventRegister" EntityType="Self.tEventRegister" />
+    <EntitySet Name="tEventSet" EntityType="dbTestForEventRegister.tEventSet" />
+  </EntityContainer>
   <EntityType Name="tEventSet">
     <Key>
       <PropertyRef Name="fEventId" />
@@ -37,7 +41,7 @@
     <Property Name="fEventImgPath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="fEventLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="fEventDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="fEventFeeOrFree" Type="Int32" />
+    <Property Name="fEventFeeOrFree" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="fEventFee" Type="Int32" />
     <Property Name="fEventFromDay_R" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="fEventFromTime_R" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -60,8 +64,4 @@
     <Property Name="ferOtherColumn4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="ferOtherColumn5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityContainer Name="TestForEventRegisterEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="tEventRegister" EntityType="Self.tEventRegister" />
-    <EntitySet Name="tEventSet" EntityType="Self.tEventSet" />
-  </EntityContainer>
 </Schema>

@@ -37,7 +37,7 @@
     <Property Name="fEventImgPath" Type="nvarchar" MaxLength="100" />
     <Property Name="fEventLocation" Type="nvarchar" MaxLength="50" />
     <Property Name="fEventDescription" Type="nvarchar" MaxLength="500" />
-    <Property Name="fEventFeeOrFree" Type="int" />
+    <Property Name="fEventFeeOrFree" Type="nvarchar" MaxLength="10" />
     <Property Name="fEventFee" Type="int" />
     <Property Name="fEventFromDay_R" Type="nvarchar" MaxLength="50" />
     <Property Name="fEventFromTime_R" Type="nvarchar" MaxLength="50" />
